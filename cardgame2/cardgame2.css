@@ -1,0 +1,64 @@
+div#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+div#player01{
+    margin-left:100px;
+}
+div#player02{
+    margin-right:100px;
+}
+div#cards01{
+    border:black 2px solid;
+    width:806px;
+    height:608px;
+}
+div#cards02{
+    border:black 2px solid;
+    width:806px;
+    height:608px;
+}
+div#row{
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+}
+div#row > div{
+    width:200px;
+    height:200px;
+    border: black 2px solid;
+    cursor:pointer;
+}
+img{
+    width:198px;
+    height:200px;
+}
+div#box02{
+    background-color: rgb(255, 127, 129);
+}
+h1{
+   text-align: center;
+}
+h2{
+    text-align: center;
+}
+div#header{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+input{
+    width:40px;
+    text-align:center;
+}
+button{
+    width:250px;
+    height:70px;
+    margin:40px;
+    margin-left:800px;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-radius: 5%;
+    cursor:pointer;
+}

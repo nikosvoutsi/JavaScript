@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card game</title>
+    <script defer src="cardgame2.js"></script> 
+    <link rel="stylesheet" href="cardgame2.css">  
+
+</head>
+<body>
+    <div id="header">
+    <div style="text-align:left; font-size: 16px;" ></div><p style="font-size: 18px;">Player 1 points:<input type="number" id="points01" value="0"></p> <h1>Find the pairs</h1><h2></h2><div style="text-align:right"><p style="font-size: 18px;">Player 2 points:<input type="number" id="points02" value="0"></p></div>
+    </div>
+    <div id="container">
+        <div id="player01"><h2>Player 1</h2>
+             <div id="cards01">
+                <div id="row">
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,0)" alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,1)" alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,2)" alt=""></div>
+                    <div id="box01"><img src="images/bg.jpg" onclick="insert1(this,3)" alt=""></div>
+                </div>
+                <div id="row">
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,4)" alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,5)" alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,6)" alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,7)" alt=""></div>
+                </div>
+                <div id="row">
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,8)" alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,9)"alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,10)" alt=""></div>
+                    <div class="box01"><img src="images/bg.jpg" onclick="insert1(this,11)" alt=""></div>
+                </div>
+             </div>
+        </div>
+        <div id="player02"><h2>Player 2</h2>
+            <div id="cards02">
+                <div id="row">
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,0)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,1)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,2)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,3)" alt=""></div>
+                </div>
+                <div id="row">
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,4)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,5)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg"  onclick="insert2(this,6)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg"  onclick="insert2(this,7)"alt=""></div>
+                </div>
+                <div id="row">
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,8)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,9)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,10)" alt=""></div>
+                    <div class="box02"><img src="images/bg2.jpg" onclick="insert2(this,11)" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="draw()">new game</button>
+</body>
+
+</html>
