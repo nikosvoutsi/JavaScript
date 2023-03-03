@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="triliza.css">
+    <style src="triliza.js"></style>
+    <style>
+        body{
+            background-color: rgb(195, 235, 253);
+        }
+        div#wrapper{
+            display:flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        div#left{
+            padding:50;
+            padding-top:0;
+            position:fixed;
+        }
+        div#container{
+            position:absolute;
+            background-color: whitesmoke;
+            border:black 5px solid; 
+            height:586px;
+            width:676px;
+            margin:20px;
+            margin-left: 600px;
+            display: flex;
+        }
+        div#buttons{
+            margin: 0;
+            
+        }
+
+        h1{
+            font-size: 58px;
+            text-align:center;
+            color:rgb(217, 26, 99);
+        }
+
+        h2{
+            font-size: 40px;
+            text-align:center;
+            color: green;
+        }
+
+        div#container div#row div{
+            border:black 3px solid;
+            height:170px;
+            width:170px;
+            display: flex;
+            cursor: pointer;
+            font-size: 160px;
+            text-align:center;
+            padding-left:50px;
+            padding-bottom: 20px;
+        }
+        .reset{
+           margin-left:1130px;
+           margin-top: 300px;
+           width:140px;
+           height:50px;
+           cursor: pointer;
+           border-radius: 10%;
+           position:absolute;
+        }
+        .start{
+           font-size: 20px;
+           width:210px;
+           height:80px;
+           cursor: pointer;
+           border-radius: 10%;
+           margin-top: 590px;
+           margin-left: 60px;
+        }
+        div#left p{
+            padding-left:50px;
+            font-size:26px;
+        }
+        div#left input{
+            height:30px;
+            width:200px;
+            text-align: center;
+            font-size:25px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop preload="auto">
+        <!-- <source src="end.wav" type="audio/wav"> -->
+        <source src="start.wav" type="audio/wav">
+    </audio>
+    <h1>Tic Tac Toc Game</h1>
+    <span><h2></h2></span><span></span>
+    <div id="wrapper">
+        <div id="left">
+            <p style="font-size: 35px; color:green">Player 1</p>
+            <p>Name:<input type="text" id="player01" value="Player 1"></p><br>
+            <p>Wins:<input type="text" id="player01Wins" value=0></p><br>
+            <p style="font-size: 35px; color:red">Player 2 </p>
+            <p>Name:<input type="text" id="player02" value="Player 2"></p><br>
+            <p>Wins:<input type="text" id="player02Wins" value=0></p></div>
+            
+        <div id="container">
+            <div id="row">
+                <div id='box01' class="box" onclick="insert(this)"></div>
+                <div id='box02' class="box" onclick="insert(this)"></div>
+                <div id='box03' class="box" onclick="insert(this)"></div>
+            </div>
+            <div id="row">
+                <div id='box04' class="box" onclick="insert(this)"></div>
+                <div id='box05' class="box" onclick="insert(this)"></div>
+                <div id='box06' class="box" onclick="insert(this)"></div>
+            </div>
+            <div id="row">
+                <div id='box07' class="box" onclick="insert(this)"></div>
+                <div id='box08' class="box" onclick="insert(this)"></div>
+                <div id='box09' class="box" onclick="insert(this)"></div>
+            </div>
+        </div>
+    </div><br>
+    <span><button onclick="start()" class="start">START NEW GAME</button></span><span><button type="reset" class="reset" onclick="reset()">RESET</button></span>
+   
+        
+    
+</body>
+
+<script>
+    
+    let counterMoves=0;
+
+    function start(){
+        /* let audio=document.querySelector('audio');
+        audio.setAttribute('play') */
+        let h2=document.querySelector("h2");
+        h2.style.color="green";
+        let player01=document.getElementById("player01").value;
+        let player02=document.getElementById("player02").value;
+        reset();
+        h2.textContent=player01+" it's your turn!!!";
+        let x =document.getElementsByClassName('box');
+        for(i in x)
+            x[i].setAttribute('onclick', 'insert(this)');
+        counterMoves=0;
+    }
+    
+    function insert(element) {
+        let x=document.getElementsByClassName("box");
+        console.log(x)
+        let h2=document.querySelector("h2");
+        let player01=document.getElementById("player01").value;
+        let player02=document.getElementById("player02").value;
+        if(element.textContent==""){
+            counterMoves++;
+            if(counterMoves%2==1){
+                element.style.color="green";
+                element.textContent="X";
+                h2.textContent=player02 +" it's your turn!!!";
+                h2.style.color="red";
+            }else{
+                element.style.color="red";
+                element.textContent="O";
+                h2.textContent=player01+" it's your turn!!!";
+                h2.style.color="green";
+            }
+        }else{
+            return;
+        }
+     
+        if((box01.textContent==box02.textContent&&box02.textContent==box03.textContent&&box01.textContent!="")||
+        (box01.textContent==box04.textContent&&box04.textContent==box07.textContent&&box01.textContent!="")||
+        (box01.textContent==box05.textContent&&box05.textContent==box09.textContent&&box01.textContent!="")||
+        (box02.textContent==box05.textContent&&box05.textContent==box08.textContent&&box02.textContent!="")||
+        (box03.textContent==box05.textContent&&box05.textContent==box07.textContent&&box03.textContent!="")||
+        (box03.textContent==box06.textContent&&box06.textContent==box09.textContent&&box03.textContent!="")||
+        (box07.textContent==box08.textContent&&box08.textContent==box09.textContent&&box07.textContent!="")||
+        (box04.textContent==box05.textContent&&box05.textContent==box06.textContent&&box04.textContent!="")){
+            if(h2.textContent==player02 + " it's your turn!!!"){
+                h2.style.color="green";
+                h2.textContent=player01 + " is the winner!!!";
+                let points01=document.getElementById("player01Wins");
+                points01.value++;
+                console.log(points01.value);
+                let x=document.getElementsByClassName("box");
+                for(i in x)
+                   x[i].removeAttribute('onclick', 'insert(this)'); 
+                
+            }
+            if(h2.textContent==player01 + " it's your turn!!!"){
+                h2.style.color="red";
+                h2.textContent=player02 + " is the winner!!!";
+                let points02=document.getElementById("player02Wins");
+                points02.value++;
+                console.log(points02.value);
+                let x=document.getElementsByClassName("box");
+                for(i in x)
+                   x[i].removeAttribute('onclick', 'insert(this)');
+            }
+            
+              
+        }
+
+        if(box01.textContent!=""&&box02.textContent!=""&&box03.textContent!=""&&box04.textContent!=""&&box05.textContent!=""&&box06.textContent!=""&&box07.textContent!=""&&box08.textContent!=""&&box09.textContent!=""){
+            h2.style.color="black";
+            h2.textContent="Nobody wins!!!";
+        }   
+            
+    }
+
+    function reset(){
+        counterMoves=0;
+        let h2=document.querySelector("h2");
+        h2.textContent="";
+        let box=document.querySelectorAll("div#container div#row div");
+        for(let i in box) box[i].textContent="";
+    }
+
+
+</script>
+</html>
