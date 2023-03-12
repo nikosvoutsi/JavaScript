@@ -1,0 +1,187 @@
+body{
+    background-image: url(images/background.jpg);
+    background-size:cover;
+    position:relative;
+    
+}
+h2{
+    text-align:center;
+    margin:23px;
+    font-size:30px;
+    padding-top: 10px;
+}
+div#container{
+    margin-top: 140px;
+    background-color: rgb(230, 236, 129);
+    opacity: 0.86;
+    margin-left:100px;
+    margin-right:100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5vh;
+    box-shadow: -1px -2px 31px 0px rgba(0,0,0,0.64);
+
+}
+div#epilogi{
+    width:220px;
+    height:60px;
+    position: relative;
+    text-align: center;
+    margin-left:43%; 
+    /* margin-right:43%; */
+    border-radius: 10%;
+    background-color: rgb(219, 219, 214);
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.8s; 
+}
+@media screen and (max-width:1500px){
+    div#epilogi{
+        margin-left:40%; 
+    }
+}
+@media screen and (max-width:1200px){
+    div#epilogi{
+        margin-left:39%; 
+    }
+}
+@media screen and (max-width:1080px){
+    div#epilogi{
+        margin-left:38%; 
+    }
+}
+@media screen and (max-width:900px){
+    div#epilogi{
+        margin-left:35%; 
+    }
+}
+@media screen and (max-width:800px){
+    div#epilogi{
+        margin-left:32%; 
+    }
+}
+
+p#ep{
+    text-align: center;
+    font-size: 23px;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight:bolder;
+}
+
+p#ep2{
+    text-align: center;
+    font-size: 23px;
+    text-transform: uppercase;
+    padding-top: 16px;
+    font-weight:bolder;
+}
+
+div#komma{
+    height:50px;
+    background-color: rgb(244, 246, 196);
+    margin-bottom: 10px;
+    
+    padding-bottom:8px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(240, 233, 233);
+}
+
+div#epilogi:hover{
+    text-decoration: none;
+    background-color:rgb(255, 255, 255);
+}
+
+#a01{
+    text-decoration:underline;
+    color:default;
+
+}
+
+img#komma{
+    width:40px;
+    height:40px;
+    margin-left:30px;
+    margin-right:50px;
+}
+
+div#header{
+    background-color: rgb(209, 209, 200);
+    opacity:0.9;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div#question{
+    background-color: rgb(194, 194, 191);
+}
+
+div#header h2{
+    padding-bottom:5px;
+}
+
+div#sima{
+    margin-left:200px;
+    padding-top:8px;
+}
+
+div#name{
+    margin-top:10px;
+    font-size: 30px;
+    margin-left:20px;
+}
+
+div#pososto{
+    margin-top:10px;
+    font-size: 30px;
+    margin-left:90px;
+    margin-right:180px;
+}
+
+a:active{
+    color:red;
+}
+
+form{
+    text-align: center;
+}
+
+form select, input{
+    cursor: pointer;
+}
+form input:active{
+    background-color:rgb(213, 197, 197);
+ }
+
+ p img{
+    width:30px;
+}
+img#home:hover{
+    background-color:rgb(243, 243, 120);
+}
+img#home:active{
+    background-color:rgb(243, 204, 120);
+}
+
+button#results{
+    cursor:pointer;
+    margin:5px;
+    width:130px;
+    height:35px;
+    font-size: 18px;
+}
+button#results:active{
+    background-color:rgb(213, 197, 197);
+}
+span#ap:active{
+    color: red;
+}
