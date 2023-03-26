@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script defer src="todolist.js"></script>
+    
+</head>
+<body>
+    <span id="copyright">©NikosVoutsi</span><span id="copyright2">WorkEarly2023</span>
+    <h2>Add your tasks here</h2>
+    <div id="warningArea"><p></p></div>
+    <p>Task name: <input type="text" id="task" style="width:240px; height:30px;" placeholder="my tasks"><span>Date due: <input type="date" id="dateDue" style="width:240px; height:30px;" placeholder="dd/mm/yyyy" ><input type="submit" id="submit"onclick="add()"style="width:70px;height:36px;cursor: pointer; font-size:18px" name="Submit" value="Add"></p>
+    <p style="text-align:left; margin-left:35%;">Sort by: <select id="order" onchange="orderby(this.value, orderByChecked, orderByDateAdded, orderByDateDue)">
+                     <option value="01">Date added(newest first)</option>
+                     <option value="02">Date added(oldest first)</option>
+                     <option value="03">Date due(newest first)</option>
+                     <option value="04">Date due(oldest first)</option>
+                     <option value="05">Checked</option>
+                     <option value="06">Unchecked</option> 
+                </select> <button style="margin-left:35px; width:150px; height:30px; font-size:20px; cursor: pointer;" onclick="save()">Save changes</button></p>
+    <div id="container"></div>
+    
+</body>
+
+</html>
